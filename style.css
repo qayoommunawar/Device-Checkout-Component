@@ -27,6 +27,7 @@
     overflow-x: hidden;
     /* padding: var(--gap-md); */
     position: relative;
+    background-color: var(--color-off-white);
   }
 
 body::before{
@@ -176,7 +177,7 @@ main{
       ); */
     /* max-width: calc(95% + var(--gap-sml));  */
     width: 100%;
-    max-width: 100%;
+    max-width: 78rem;
     margin: 0 auto;
 }
 
@@ -294,7 +295,7 @@ form button{
 }
 
 
-@media(min-width: 832px){
+@media(min-width: 50rem){
     section.checkout-product{
         border-radius: var(--gap-sml) 0 0 var(--gap-sml);
     }
