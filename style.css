@@ -1,0 +1,313 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    /* font size */
+    font-family: 'Roboto', sans-serif;
+    /* centering the body */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+    padding: var(--gap-sml);
+    overflow-x: hidden;
+    /* padding: var(--gap-md); */
+    position: relative;
+  }
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background: url('resources/background-image.png') no-repeat center top / cover;
+    z-index: -1;
+}
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+
+  /*
+    10. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+  /* ---------- */
+
+  /* CSS Classes */
+
+:root{
+    /* colors */
+    --color-primary-black: #1D1D1F;
+    --color-primary-gray: #394150;
+    --color-gray-light: #D2D5DA;
+    --color-off-white: #F3F4F6;
+    --color-pure-white: #FFFFFF;
+    --color-light-brown: #E5E7EB;
+    /* gaps*/
+    --gap-lg: 2rem;
+    --gap-md: 1.5rem;
+    --gap-sml: 1rem;
+}
+
+/*---------*/
+/* Utility Classes */
+
+/* flex styles */
+
+.flex-row{
+    display: flex;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+/* text styles */
+h1{
+    font-size: var(--gap-md);
+    font-weight: 600;
+}
+
+h2{
+    font-size: var(--gap-sml);
+    font-weight: 500;
+}
+
+h3,h4{
+    font-weight: 500;
+}
+
+.color-light{
+    color: var(--color-primary-gray);
+}
+
+
+/* button */
+button{
+    background-color: transparent;
+    /* outline: transparent; */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-dark{
+    background-color: var(--color-primary-black);
+    color: var(--color-pure-white);
+    border-radius: calc(var(--gap-sml)/2);
+    
+}
+
+
+/* inputs */
+input, select{
+    width: 100%;
+    border: 1px solid var(--color-gray-light);
+    padding: calc(var(--gap-sml)/1.5) var(--gap-sml);
+    background-color: var(--color-light-brown);
+    outline: transparent;
+    border-radius: calc(var(--gap-sml)/2);
+    margin-block-start: calc(var(--gap-sml)/1.5);
+}
+
+label{
+    color: var(--color-primary-gray);
+}
+
+/* main wrapper */
+
+main{
+    width: 100%;
+}
+
+.main-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+     /* repeat(auto-fill, minmax(380px, 1fr));  */
+     /* repeat(
+        auto-fill,
+        minmax(min(380px, 100%), 1fr)
+      ); */
+    /* max-width: calc(95% + var(--gap-sml));  */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+.checkout-header{
+    gap: calc(var(--gap-sml));
+    color: var(--color-pure-white);
+    margin-block: var(--gap-sml);
+}
+
+.checkout-header span{
+    background-color: var(--color-primary-black);
+    padding: calc(var(--gap-sml)/3) calc(var(--gap-sml)/2);
+    border-radius: calc(var(--gap-md));
+}
+
+/* product section */
+
+section.checkout-product{
+    background-color: var(--color-gray-light);
+    padding: var(--gap-md);
+    border-radius: var(--gap-sml) var(--gap-sml) 0 0;
+    gap: var(--gap-md);
+}
+
+section .grid-checkout{
+    display: grid;
+    grid-template-columns: 20% 75%;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: var(--gap-sml);
+    padding-block-end: var(--gap-sml);
+    border-bottom: 1px solid var(--color-light-brown);
+}
+
+section .grid-checkout .col-1{
+    gap: var(--gap-md);
+    align-items: flex-start;
+}
+
+section .grid-checkout .col-1 .product-img{
+    background-color: var(--color-off-white);
+    padding: calc(var(--gap-sml)/2);
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: calc(var(--gap-sml)/2);
+}
+
+
+section .grid-checkout .col-2{
+    gap: var(--gap-lg);
+}
+
+section .grid-checkout .col-2 .product-details{
+    gap: calc(var(--gap-sml)/1.5);
+    justify-content: space-between;
+}
+
+section .grid-checkout .col-2 .product-col-2{
+    gap: calc(var(--gap-sml)*1.5);
+
+}
+
+section .grid-checkout .col-2 .product-col-2 button{
+    align-self: flex-end;
+}
+
+section.checkout-product .product-price{
+    gap: var(--gap-sml);
+}
+
+/* coupan */
+section.checkout-product .coupan-input{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: calc(var(--gap-sml)/3);
+}
+
+section.checkout-product .coupan-input input{
+    margin: 0;
+    background-color: var(--color-pure-white);
+}
+
+/* form */
+
+section.form{
+    background-color: var(--color-pure-white);
+    padding: var(--gap-md);
+    border-radius: 0 0 var(--gap-sml) var(--gap-sml);
+}
+
+section.form h5{
+    font-size: var(--gap-sml);
+}
+
+form{
+    gap: var(--gap-sml);
+    margin-block: var(--gap-sml);
+}
+
+section.form .address{
+    gap: calc(var(--gap-sml));
+}
+
+/* section.form .address input{
+    margin: 0;
+} */
+section.form .address > *{
+    flex: 1;
+}
+
+form button{
+    padding: calc(var(--gap-sml)/1.5) var(--gap-sml);
+}
+
+
+@media(min-width: 832px){
+    section.checkout-product{
+        border-radius: var(--gap-sml) 0 0 var(--gap-sml);
+    }
+    section.form{
+        border-radius: 0 var(--gap-sml) var(--gap-sml) 0;
+    }
+
+    .main-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .checkout-header{
+        margin-block: var(--gap-lg);
+    }
+    
+}

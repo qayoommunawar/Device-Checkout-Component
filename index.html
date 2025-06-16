@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="utility-classes.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Device Shop Checkout | devChallenges.io</title>
+
+    
+  </head>
+  <body>
+
+    <main>
+      <div class="checkout-header flex-row justify-center align-center">
+        <h1 class="main-heading">
+          Checkout
+        </h1> 
+        <span class="checkout-items">
+          3 ITEMS
+        </span>
+      </div>
+      <div class="main-wrapper">
+        <section class="checkout-product flex-col">
+          <div class="grid-checkout">
+            <div class="product-img col-1 flex-col justify-center ">
+              <div class="product-img flex-col justify-center align-center">
+                <img src="resources/Gold.png" alt="" aria-hidden="true">
+              </div>
+              <div class="product-img flex-col justify-center align-center">
+                <img src="resources/Apple-watch.png" alt="" aria-hidden="true">
+              </div>
+              <div class="product-img flex-col justify-center align-center">
+                <img src="resources/iMac.png" alt=""  aria-hidden="true">
+              </div>
+            </div>    
+            <div class="product-listing col-2 flex-col">
+              <div class="product-1 flex-row justify-between">
+                <div class="product-col-1 flex-row">
+                  
+                  <div class="product-details flex-col">
+                    <div class="product-spec">
+                      <h2 class="product-name">
+                        iPhone 12 Pro
+                      </h2>
+                      <p class="product-color color-light">         
+                        Golden
+                      </p>
+                    </div>
+                    <p class="product-quantity color-light">
+                      x1
+                    </p>
+                  </div>
+                </div>
+                <div class="product-col-2 flex-col">
+                  <h3 class="product-price">
+                    $999.00
+                  </h3>
+                  <button type="button" aria-label="close"><img src="resources/close-icon.svg" alt="" aria-hidden="true"></button>
+                </div>
+              </div>
+              <div class="product-listing product-2 flex-row justify-between">
+                <div class="product-col-1 flex-row">
+                  
+                  <div class="product-details flex-col">
+                    <div class="product-spec">
+                      <h2 class="product-name">
+                        Apple Watch
+                      </h2>
+                      <p class="product-color color-light">         
+                        Blue
+                      </p>
+                    </div>
+                    <p class="product-quantity color-light">
+                      x1
+                    </p>
+                  </div>
+                </div>
+                <div class="product-col-2 flex-col">
+                  <h3 class="product-price">
+                    $399.00
+                  </h3>
+                  <button type="button" aria-label="close"><img src="resources/close-icon.svg" alt="" aria-hidden="true"></button>
+                </div>
+              </div>
+              <div class="product-listing product-3 flex-row justify-between">
+                <div class="product-col-1 flex-row">
+                  
+                  <div class="product-details flex-col">
+                    <div class="product-spec">
+                      <h2 class="product-name">
+                        iMac
+                      </h2>
+                      <p class="product-color color-light">         
+                        Green
+                      </p>
+                    </div>
+                    <p class="product-quantity color-light">
+                      x1
+                    </p>
+                  </div>
+                </div>
+                <div class="product-col-2 flex-col">
+                  <h3 class="product-price">
+                    $1199.00
+                  </h3>
+                  <button type="button" aria-label="close"><img src="resources/close-icon.svg" alt="" aria-hidden="true"></button>
+                </div>
+              </div>
+            </div>
+          </div>    
+          <div class="coupan-input">
+            <input type="text" placeholder="Enter coupon code">
+            <button type="button" class="btn-dark">
+              Apply Coupon
+            </button>
+          </div>
+          <div class="product-price flex-col">
+            <div class="sub-total flex-row justify-between">
+              <h4 class="heading color-light">
+                Sub total
+              </h4>
+              <h4 class="amount color-light">
+                $2597.00
+              </h4>
+            </div>
+            <div class="tax flex-row justify-between">
+              <h4 class="heading color-light">
+                Tax
+              </h4>
+              <h4 class="amount color-light">
+                $623.28
+              </h4>
+            </div>
+            <div class="total flex-row justify-between">
+              <h4 class="heading text-dark">
+                Total
+              </h4>
+              <h4 class="amount text-dark">
+                $3220.28
+              </h4>
+            </div>
+          </div>
+        </section>
+        <section class="form">
+          <h5 class="form-heading">
+            Contact Information
+          </h5>
+          <form action="#" class="flex-col">
+            <label for="full-name" class="flex-col">
+              First & Last name
+              <input type="text"  id="full-name" placeholder="First & Last name">
+            </label>
+            <label for="mail" class="flex-col">
+              Email Address
+              <input type="email" id="mail" placeholder="Enter email address">
+            </label>
+            <div class="address flex-row">
+              <label for="country" class="flex-col">
+                Country
+                <select id="country">
+                  <option value="finland" selected>Finland</option>
+                  <option value="poland">Poland</option>
+                  <option value="ireland">Ireland</option>
+                </select>
+              </label>
+              <label for="zip-code" class="flex-col">
+                Postal Code
+                <input type="text" id="zip-code" placeholder="00270">
+              </label>
+            </div>
+            <button type="submit"  aria-label="submit" class="btn-dark">Continue</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
